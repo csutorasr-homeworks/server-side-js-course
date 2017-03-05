@@ -1,0 +1,26 @@
+{
+  "name": "server-side-js-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csutorasr/server-side-js-course.git"
+  },
+  "author": "Robin Csutorás",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/csutorasr/server-side-js-course/issues"
+  },
+  "homepage": "https://github.com/csutorasr/server-side-js-course#readme",
+  "dependencies": {
+    "express": "^4.15.0"
+  }
+}
