@@ -1,11 +1,10 @@
 var express = require('express');
-var renderMW = require('render');
-var loginMW = require('login');
+var outsideMW = require('./outside');
+var recepieMW = require('./recepie');
 
 var mainMW = express.Router();
 
-mainMW.use(loginMW);
-mainMW.get("/index.html",renderMW('/index.html'));
-mainMW.get("/",renderMW('/index.html'));
+mainMW.use(outsideMW);
+mainMW.use(recepieMW);
 
 module.exports = mainMW;
