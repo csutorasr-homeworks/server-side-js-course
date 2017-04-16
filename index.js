@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var mainMW = require('middlewares/main')
+var mainMW = require('routes/main')
 
 //app.use(express.static('static'));
 
