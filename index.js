@@ -1,8 +1,10 @@
 var express = require('express');
 var app = express();
-var mainMW = require('routes/main')
+var mainMW = require('./routes/main');
 
-//app.use(express.static('static'));
+
+app.set('view engine', 'ejs');
+app.use(express.static('static'));
 
 app.use(function (req, res, next) {
     res.tpl = {};
@@ -13,7 +15,7 @@ app.use(function (req, res, next) {
 app.use(mainMW);
 
 app.use(function (err, req, res, next) {
-    res.send(500, "Hiba a rendszerben.");
+    res.status(500).send("Hiba a rendszerben.");
     res.end();
     console.error(err.stack);
 });
