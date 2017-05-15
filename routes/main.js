@@ -1,11 +1,13 @@
 var express = require('express');
 var renderMW = require('../middlewares/render');
 var loginMW = require('./login');
+var recipeMW = require('./recipe');
+var checkauthMW = require('../middlewares/checkauth');
 
 var mainMW = express.Router();
 
+mainMW.use(checkauthMW);
 mainMW.use(loginMW);
-mainMW.get("/index.html", renderMW('index.ejs'));
-mainMW.get("/", renderMW('index.ejs'));
+mainMW.use(recipeMW);
 
 module.exports = mainMW;

@@ -1,8 +1,14 @@
 <%- include('header.ejs') %>
 <div class="container-fluid">
+<% if (recipes.length > 0) { %>
     <ul class="list-group">
-        <li class="list-group-item"><a href="/recept.html">Krumplis tészta</a></li>
-        <li class="list-group-item"><a href="/recept.html">Rétes</a></li>
+        <% recipes.forEach(function(item){ %>
+        <li class="list-group-item"><a href="/recept/<%= item.id %>"><%= item.name %></a> - <%= item._assignedto.name %></li>
+        <% }); %>
     </ul>
+</div>
+<% } else { %>
+    <div>Nincs még recept.</div>
+<% } %>
 </div>
 <%- include('footer.ejs') %>

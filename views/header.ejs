@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Receptes konyha</title>
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.css" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -21,11 +21,11 @@
                 </button>
                 <a class="navbar-brand" href="#">Receptkereső</a>
         </div>
-        <% if (tpl.loggedin) { %>
+        <% if (loggedin) { %>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="/">Kezdőlap</a></li>
-                <li><a href="/belepes.html">Kijelentkezés</a></li>
+                <li><a href="/kilep">Kijelentkezés</a></li>
                 <li><a href="/ujrecept.html">Új recept</a></li>
             </ul>
         </div>
@@ -34,7 +34,6 @@
             <ul class="nav navbar-nav">
                 <li><a href="/">Kezdőlap</a></li>
                 <li><a href="/belepes.html">Bejelentkezés</a></li>
-                <li><a href="/ujrecept.html">Új recept</a></li>
             </ul>
         </div>
         <% } %>

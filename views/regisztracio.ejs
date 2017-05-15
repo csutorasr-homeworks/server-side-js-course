@@ -1,17 +1,18 @@
 <%- include('header.ejs') %>
 <div class="container-fluid">
     <form class="col-sm-push-3 col-sm-6 col-xs-12" method="post">
+        <%- include('errorbox.ejs') %>
         <div class="input-group">
             <span class="input-group-addon">Felhasználónév:</span>
-            <input type="text" class="form-control" placeholder="Felhasználónév">
+            <input type="text" class="form-control" placeholder="Felhasználónév" name="name">
         </div>
         <div class="input-group">
             <span class="input-group-addon">Jelszó:</span>
-            <input type="password" class="form-control" placeholder="Jelszó">
+            <input type="password" class="form-control" placeholder="Jelszó" name="password">
         </div>
         <div class="input-group">
             <span class="input-group-addon">Kedvenc ételed:</span>
-            <input type="password" class="form-control" placeholder="Kedvenc ételed">
+            <input type="password" class="form-control" placeholder="Kedvenc ételed" name="favFood">
         </div>
         <div class="col-md-12 text-center">
             <button type="submit" class="btn btn-success col-xs-12">Regisztráció</button>
